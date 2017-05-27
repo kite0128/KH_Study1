@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index</title>
+<style type="text/css">
+/* 1000 800 */
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+#main {
+	width: 1000px;
+	height: 800px;
+}
+
+#header_div {
+	width: 998px;
+	height: 148px;
+	border: 1px solid gray;
+}
+
+#left_div {
+	width: 144px;
+	height: 494px;
+	float: left;
+	border: 1px solid red;
+	margin-top: 4px;
+	margin-right: 4px;
+}
+
+#center_div {
+	width: 700px;
+	height: 500px;
+	float: left;
+}
+
+#center_t {
+	width: 694px;
+	height: 294px;
+	border: 1px solid green;
+	margin-top: 4px;
+	margin-right: 4px;
+}
+
+#center_t span {
+	font-size: 40px;
+	text-shadow: 2px 2px gray;
+}
+
+#center_b {
+	width: 694px;
+	height: 194px;
+	border: 1px solid black;
+	margin-top: 4px;
+	margin-right: 4px;
+}
+
+#right_div {
+	width: 148px;
+	height: 494px;
+	float: left;
+	border: 1px solid blue;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+#footer_div {
+	width: 998px;
+	height: 144px;
+	border: 1px solid orange;
+	clear: both;
+}
+
+#header_div #header_login {
+	width: 998px;
+	height: 48px;
+}
+
+#header_div #header_login div {
+	float: right;
+}
+
+#header_div #header_login a {
+	font: 11px/48px nanumgothic, "굴림체", dotum, sans-serif;
+	text-decoration: none;
+}
+
+#header_div #header_menu {
+	width: 998px;
+	height: 100px;
+}
+
+#header_div #header_menu dl.menulist {
+	width: 998px;
+	height: 80px;
+	background-color: #ffcc80;
+	margin-top: 10px;
+}
+
+#header_div #header_menu dl.menulist dd {
+	width: 198px;
+	height: 80px;
+	border: 2px dotted #ff5c33;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	float: left;
+}
+
+#header_div #header_menu dl.menulist dd.menu04 {
+	border-right-width: 0px;
+}
+
+#header_div #header_menu dl.menulist dt {
+	width: 0px;
+	height: 0px;
+	visibility: hidden;
+	text-indent: -2000;
+}
+
+#header_div #header_menu dl.menulist dd a {
+	display: block;
+	width: 198px;
+	height: 80px;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	font: bold 16px/80px nanumgothic, "굴림체", dotum, sans-serif;
+}
+
+#header_div #header_menu dl.menulist dd ul {
+	position: relative;
+	display: none;
+}
+
+#header_div #header_menu dl.menulist dd ul li {
+	width: 198px;
+	height: 80px;
+	background-color: #ffcc80;
+	list-style-type: none;
+}
+
+#header_div #header_menu .menulist dd:HOVER ul {
+	display: block;
+}
+</style>
+</head>
+<body>
+
+	<div id="main">
+
+		<div id="header_div">
+
+			<div id="header_login">
+				<div>
+					<a href="#">홈</a> : <a href="#">로그인</a> : <a href="#">회원가입</a>
+				</div>
+			</div>
+
+			<div id="header_menu">
+				<dl class="menulist">
+					<dt>메뉴목록</dt>
+					<dd>
+						<a href="#"><img alt="HOME" title="HOME"
+							src="htmldemo/images/bag.jpg" align="middle" /></a>
+					</dd>
+					<dd>
+						<a href="#">MENU 01</a>
+
+						<ul>
+							<li><a href="#">sub11</a></li>
+							<li><a href="#">sub12</a></li>
+							<li><a href="#">sub13</a></li>
+							<li><a href="#">sub14</a></li>
+							<li><a href="#">sub15</a></li>
+						</ul>
+
+					</dd>
+					<dd>
+						<a href="#">MENU 02</a>
+						<ul>
+							<li><a href="#">sub21</a></li>
+							<li><a href="#">sub22</a></li>
+							<li><a href="#">sub23</a></li>
+							<li><a href="#">sub24</a></li>
+							<li><a href="#">sub25</a></li>
+						</ul>
+					</dd>
+					<dd>
+						<a href="#">MENU 03</a>
+						<ul>
+							<li><a href="#">sub31</a></li>
+							<li><a href="#">sub32</a></li>
+							<li><a href="#">sub33</a></li>
+							<li><a href="#">sub34</a></li>
+							<li><a href="#">sub35</a></li>
+						</ul>
+					</dd>
+					<dd class="menu04">
+						<a href="#">MENU 04</a>
+						<ul>
+							<li><a href="#">sub41</a></li>
+							<li><a href="#">sub42</a></li>
+							<li><a href="#">sub43</a></li>
+							<li><a href="#">sub44</a></li>
+							<li><a href="#">sub45</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+
+		</div>
+		<div id="left_div"></div>
+		<div id="center_div">
+			<div id="center_t">
+				<span>So So한 이야기</span>
+			</div>
+			<div id="center_b"></div>
+		</div>
+		<div id="right_div"></div>
+		<div id="footer_div"></div>
+
+	</div>
+</body>
+</html>

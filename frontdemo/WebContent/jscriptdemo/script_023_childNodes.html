@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_023_childNodes</title>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<p>content</p>
+		<a href="">세미나 장소</a> 
+		<span><a href="">정보</a></span>
+	</div>
+
+	<script type="text/javascript">
+	//'childNodes'는 빈 공백 포함 div의 모든 자식 요소들을 다 가지고 온다.(7개)
+	var divChildNode = document.getElementById("wrap").childNodes;
+	document.write("divChildNode" + divChildNode.length + "<br/>");
+	
+	//'children'은 빈 공백은 제외한 div의 자식 요소들을 가지고 온다.(3개)
+	var divChild = document.getElementById("wrap").children;
+	alert("divChild"+divChild.length+"<br/>");
+	
+	//span요소 첫 번째 자식요소에 backgroundColor을 red로 설정한다.
+	var sNode=document.getElementsByTagName('span')[0].firstChild.style.backgroundColor="red";
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_025_html_value</title>
+<style type="text/css">
+#dv{
+	width:100px;
+	height:100px;
+	border:1px solid black;
+}
+</style>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+		<input type="text" name="data" id="data"/>
+		<div id="dv"></div>
+		
+		<script type="text/javascript">
+			document.getElementById("data").value="value속성";
+			/* document.getElementById("dv").innerHTML="<p>HTML</p>"; */
+			document.getElementById("dv").innerText="<p>Text</p>"; 
+		</script>
+</body>
+</html>

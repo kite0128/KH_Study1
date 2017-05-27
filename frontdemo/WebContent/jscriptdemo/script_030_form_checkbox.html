@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_030_form_checkbox</title>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	
+</script>
+</head>
+<body>
+	<form name="frm" action="#" method="get">
+
+		<textarea cols="20" rows="3">
+	지하철 스크린도어(안전문)가 열리자 전동차 안으로 더운 바람이 ‘훅’ 하고 밀려왔다. 전동차에서 내린 승객들의 얼굴에는 짜증스러운 기색이 역력했다. 24일 서울 지하철 4호선 쌍문역 승강장은 열기로 후끈후끈했다. 천장 위로 띄엄띄엄 팬이 돌아가는 소리가 들렸지만 열기를 식히기에는 턱도 없었다. 쌍문역 역무원은 “승강장과 역사를 오가는 시민들이 폭염으로 힘들어해 환풍기를 최대한 돌리고 있지만 역부족”이라고 말했다.
+	
+	</textarea>
+	<br/>
+
+		<input type="checkbox" name="admin"/>약관의 동의 합니다.<br/>
+		<input type="checkbox" name="allCheck" id="allCheck">전체선택<br />
+		<input type="checkbox" name="subject1" id="subject1">과목1<br />
+		<input type="checkbox" name="subject2" id="subject2">과목2<br />
+		<input type="checkbox" name="subject3" id="subject3">과목3<br />
+		<input type="submit" value="commit" />
+	</form>
+	
+	<!-- 
+	폼요소에서 checked속성
+	1.체크박스와 라디어버튼에서 체크 상태값을 반환하거나 또는 체크 여부를 제어할 수 있다.
+	 -->
+
+	<script type="text/javascript">
+		document.frm.allCheck.onclick = function() {
+			if (this.checked) {
+				document.frm.subject1.checked = true;
+				document.frm.subject2.checked = true;
+				document.frm.subject3.checked = true;
+			} else {
+				document.frm.subject1.checked = false;
+				document.frm.subject2.checked = false;
+				document.frm.subject3.checked = false;
+			}
+		};
+		
+		document.frm.onsubmit=function(){
+			var admin = document.frm.admin;
+			if(admin.checked==false){
+				alert("약관에 동의해야 합니다.");
+				return false;
+			}
+		};
+	</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery_020_imageList</title>
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+}
+
+button{
+	margin:10px;
+}
+
+.check_all{
+	margin-right:5px;
+}
+
+ul {
+	margin:10px;
+	padding:10px;
+	width: 315px;
+	height: 330px;
+	list-style: none;
+	border: 1px solid black;
+}
+
+ul li {
+	float: left;
+	margin: 10px;
+	padding:5px;
+	border: 1px solid black;
+}
+</style>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+	$(document).ready(
+			function() {
+				var imgList = [ 'pic_t1.jpg', 'pic_t2.jpg', 'pic_t3.jpg',
+						'pic_t4.jpg', 'pic_t5.jpg', 'pic_t6.jpg', 'pic_t7.jpg',
+						'pic_t8.jpg' ];
+
+				$.each(imgList, function(index, value) {
+					index++;
+					$('ul').append(
+							"<li><img src='images/"+value+"'/><br><input type='checkbox'/>이미지"
+									+ index + "</li>");
+				});
+
+				$(".check_all").bind("click", function() {
+					$("input[type=checkbox]").prop("checked", this.checked);
+				});
+
+				$("button").bind("click", function() {
+					$("input[type=checkbox]:checked").each(function() {
+						$(this).parents('li').remove();
+					});
+				});
+			});
+</script>
+</head>
+<body>
+<button>삭제</button>
+<input type="checkbox" class="check_all" >전체선택</input>
+	<ul>
+
+	</ul>
+</body>
+</html>

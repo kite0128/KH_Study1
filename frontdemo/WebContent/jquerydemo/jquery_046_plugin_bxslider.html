@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery_046_plugin_bxslider</title>
+<link rel="stylesheet" type="text/css"
+	href="css\ui-lightness\jquery.bxslider.css">
+<style type="text/css">
+
+</style>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="js/jquery.bxslider.js"></script>
+<script>
+$(function(){
+	$('.bxslider').bxSlider({
+		  minSlides: 2,
+		  maxSlides: 2,
+		  slideWidth: 360,
+		  slideMargin: 10
+		});	
+});
+
+</script>
+</head>
+<body>
+<ul class="bxslider">
+  <li><img src="images/pic_1.jpg" /></li>
+  <li><img src="images/pic_2.jpg" /></li>
+  <li><img src="images/pic_3.jpg" /></li>
+  <li><img src="images/pic_4.jpg" /></li>
+  <li><img src="images/pic_5.jpg" /></li>
+  <li><img src="images/pic_6.jpg" /></li>
+</ul>
+</body>
+</html>

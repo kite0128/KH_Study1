@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_022_parentNode</title>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<p id="p1">content1</p><p id="p2">content2</p><p id="p3">content3</p>
+	</div>
+	<script type="text/javascript">
+		document.getElementById("p2").parentNode.style.color = "blue";
+		//'previousSibling'과'nextSibling'은 위에서처럼 빈 공백없이 계속 이어서 써야한다.
+		document.getElementById("p2").previousSibling.style.fontSize = "20px";
+		document.getElementById("p2").nextSibling.style.border = "2px solid black";
+	</script>
+</body>
+</html>

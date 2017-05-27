@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_002_var</title>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+var data=10;//전역변수
+var name;
+var a;
+var b,c;
+var d=0, f=4;
+var g=6, h;
+var i,j=8;
+/*
+ * 변수:프로그램이 어떤 값을 메모리에 저장해 두기 위한 공간
+	var 키워드 : 자바스크립트에서 메모리 공간을 확보하기 위해서 변수선언시 사용한다
+	
+	식별자 규칙
+	1.첫번째 문자는 A-Za-z_$만 사용한다.
+	2.나머지 문자는 A-Za-z_$0_9만 사용한다.
+			kor_score(0)
+			averageScore(0)
+			1234Test(x)
+	3.자바스크립트 예약어는 사용할 수 없다.
+ */
+function process(){
+	var num=20;//지역변수
+	var book;
+	document.write(data+" " +num+" "+name+" "+book);
+}
+</script>
+</head>
+<body>
+
+<button onclick="process()">click</button>
+
+</body>
+</html>

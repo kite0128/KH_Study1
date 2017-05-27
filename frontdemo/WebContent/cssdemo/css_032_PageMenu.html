@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: menu;
+	text-decoration: none;
+	letter-spacing: 0px;
+}
+
+.wrap {
+	width: 1000px;
+	height: 800px;
+}
+
+.menuBar {
+	width: 1000px;
+	border: none;
+	background-color: orange;
+	overflow: hidden;
+}
+
+.menuLogo {
+	width: 200px;
+	float: left;
+}
+
+.menuItem {
+	width: 800px;
+	float: left;
+}
+
+.menuBar ul {
+	/* background-color: teal; */
+	list-style: none;
+}
+
+.menuBar ul li {
+	width: 200px;
+}
+
+.menuBar li {
+	float: left;
+}
+
+.menuBar li ul {
+	/* background: yellow; */
+	display: none;
+	height: auto;
+	position: absolute;
+}
+
+.menuBar li ul li a, .menuBar li ul li {
+	background: orange;
+	display: block;
+	float: none;
+	font-size: 18px;
+	font-style: normal;
+}
+
+.menuBar a {
+	color: white;
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 70px;
+	text-align: center;
+	line-height: 70px;
+}
+
+.menuBar li a:hover, .menubar li:hover, .menuBar li li:hover {
+	background: gray;
+	color: white;
+}
+
+.menuBar li:hover ul {
+	display: block;
+}
+
+.menuBar li:hover li a {
+	background: none;
+}
+</style>
+</head>
+<body>
+	<form>
+		<div class="wrap">
+			<div class="menuBar">
+				<div class="menuLogo">
+					<a href="#">Logo</a>
+				</div>
+				<ul class="menuItem">
+					<li><a href="#">Menu 01</a>
+						<ul>
+							<li><a href="#">Sub1</a></li>
+							<li><a href="#">Sub2</a></li>
+							<li><a href="#">Sub3</a></li>
+							<li><a href="#">Sub4</a></li>
+							<li><a href="#">Sub5</a></li>
+						</ul></li>
+					<li><a href="#">Menu 02</a>
+						<ul>
+							<li><a href="#">Sub1</a></li>
+							<li><a href="#">Sub2</a></li>
+							<li><a href="#">Sub3</a></li>
+							<li><a href="#">Sub4</a></li>
+							<li><a href="#">Sub5</a></li>
+						</ul></li>
+					<li><a href="#">Menu 03</a>
+						<ul>
+							<li><a href="#">Sub1</a></li>
+							<li><a href="#">Sub2</a></li>
+							<li><a href="#">Sub3</a></li>
+							<li><a href="#">Sub4</a></li>
+							<li><a href="#">Sub5</a></li>
+						</ul></li>
+					<li><a href="#">Menu 04</a>
+						<ul>
+							<li><a href="#">Sub1</a></li>
+							<li><a href="#">Sub2</a></li>
+							<li><a href="#">Sub3</a></li>
+							<li><a href="#">Sub4</a></li>
+							<li><a href="#">Sub5</a></li>
+						</ul></li>
+				</ul>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_038_location</title>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+	<script type="text/javascript">
+/*
+ * location : 현재 주소 영역에 참조 주소(url)정보를 나타낸다. 
+ * location 객체는 로컬 컴퓨터에서는 href속성만 지원하므로 웹 호스트(웹 서버)에 올리고 테스트를 해야만 정상적으로 실행된다.
+ */
+ 
+ //브라우저 주소 창의 URL을 리턴
+ document.write("href:"+location.href+"<br/>");//http://localhost:8090/WebDemo/jscriptdemo/script_038_location.html
+ //URL의 #에 명시된 값만 리턴(없으면 나오지 않는다.)
+ document.write("hash:"+location.hash+"<br/>");
+ //URL에서 도메인 주소만 리턴
+ document.write("hostname:"+location.hostname+"<br/>");//localhost
+ //URL에서 도메인과 포트번호 리턴
+ document.write("host:"+location.host+"<br/>");//localhost:8090
+ //URL에서 프로토콜 리턴
+ document.write("protocol:"+location.protocol+"<br/>");//http:
+ //URL에 쿼리(요청값)를 리턴('?'뒤의 값이 나온다.)
+ document.write("search:"+location.search+"<br/>");
+ //새로고침이 일어남
+ document.write("reload:"+location.reload()+"<br/>");
+</script>
+</body>
+</html>

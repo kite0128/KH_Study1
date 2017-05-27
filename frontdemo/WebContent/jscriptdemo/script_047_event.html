@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_047_event</title>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		var btn=document.getElementById("btn");
+		btn.onclick=function(){
+			alert("test1");
+		}
+		//하나의 객체에 같은 이벤트를 배치하면 안된다.(나중의 것이 실행되고 처음것은 없어짐)
+		/* btn.onclick=function(){
+			alert("test3");
+		} */
+	}
+	
+	function process(){
+		alert("test2");
+	}
+</script>
+</head>
+<body>
+<button id="btn" onclick="process()">button</button>
+
+</body>
+</html>

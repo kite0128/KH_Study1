@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_037_window_screen</title>
+<style type="text/css">
+#wrap {
+	width: 1000px;
+	height: 800px;
+	background-color: yellow;
+	margin: auto;
+}
+
+#pop {
+	width: 200px;
+	height: 200px;
+	background-color: gray;
+	position: absolute;
+}
+</style>
+
+<script type="text/javascript">
+ window.onload = function(){
+	 	var wrap = document.getElementById("wrap");
+	 	var pop = document.getElementById("pop");
+
+	 	//중앙에 맞추기 위해서 '-'를 해준다. 그렇지 않으면 오른쪽 아래 방향으로 쏠린다
+	 	//왜냐하면 가운데 들어올 사각형의 왼쪽 위 꼭지점이 (0,0)으로 정해지기 때문에(화면 정 가운데)
+	 	//가로,세로의 반만큼 빼주면 정중앙으로 이동할 수 있다.
+	 	var x = (document.body.offsetWidth/2) - (pop.offsetWidth/2);
+	 	var y = (document.body.offsetHeight/2) - (pop.offsetHeight/2);
+		pop.style.left = x+"px";
+		pop.style.top = y+"px";
+	 
+	 
+		function resize(){
+		 	var wrap = document.getElementById("wrap");
+		 	var pop = document.getElementById("pop");
+
+		 	var x = (document.body.offsetWidth/2) - (pop.offsetWidth/2);
+		 	var y = (document.body.offsetHeight/2) - (pop.offsetHeight/2);
+			pop.style.left = x+"px";
+			pop.style.top = y+"px";
+	 	}
+	 
+		 document.onresize = resize;
+
+ }
+</script>
+</head>
+<body>
+	<div id="wrap"></div>
+
+	<div id="pop">
+		<button>닫기</button>
+	</div>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	
+</script>
+</head>
+<body>
+	<script type="text/javascript">
+		var data = 'It\'s alright';
+		document.write(data + "</br>");
+
+		var data2 = "Hello \
+Dolly";
+
+		document.write(data2 + "</br>");
+
+		document.write(data2.length + "</br>");
+		/*
+		 * 특정범위 데이터를 리턴해주는 3가지 메소드
+		 1. slice(start, end); (이상,미만)
+		 2. subsrtring(start, end); (이상,미만)
+		 3. substr(start length);
+		 */
+
+		var str = "Apple, Banana, Kiwi";
+		//7인덱스부터 13미만 인덱스까지
+		//앞에서부터는 '0'부터 시작
+		document.write(str.slice(7, 13) + "</br>");
+		//뒤에서부터는 '-1'부터 시작
+		document.write(str.slice(-12, -6) + "</br>");
+
+		document.write(str.substring(7, 13) + "</br>");
+		//substring()은 음수값을 지원하지 않는다.
+		document.write(str.substring(-12, -6) + "</br>");
+
+		document.write(str.substr(7, 6) + "</br>");
+
+		str = "Please visit Microsoft! and Microsoft\<br\>Microsoft";
+		document.write(str.replace("Microsoft", "W3Schools") + "</br>");
+		//'i'대소문자 구분없이, 'g'는 모두다
+		document.write(str.replace(/Microsoft/ig, "W3Schools") + "</br>");
+
+		var text1 = "Hello World";
+		//전부 대문자로
+		document.write(text1.toUpperCase() + "</br>");
+
+		var text2 = "javascript";
+		//글자연결
+		document.write(text1.concat(" ", text2) + "</br>");
+
+		var str2 = "HELLO WORLD";
+		//i번째 글자
+		document.write(str2.charAt(0) + "</br>"); //H
+		//i번째 글자를 아스키코드값으로 리턴
+		document.write(str2.charCodeAt(0) + "</br>"); //72
+		//i번째 글자
+		document.write(str2[0]+"</br>"); //H
+
+		var txt = "a,b,c,d,e"; //string
+		var arr = txt.split(","); //string -> array
+		document.write(arr[0] + "</br>");
+		for(var index in arr)
+			document.write(arr[index]+"</br>");
+		
+		var txt2 = "qwert"; 
+		var arr2 = txt2.split("");
+		for(var index in arr2)
+			document.write(arr2[index]+"</br>");
+		
+		var str3="The rain in SPAIN stays mainly in the plain";
+		var res=str3.match(/ain/g);
+		//검색데이터와 일치하는 문자열이 없으면 null을 반환
+		document.write(res+"</br>");
+		
+		res=str3.search("ain");
+		//검색데이터와 일치하는 문자열이 없으면 -1을 리턴
+		document.write(res+"</br>");
+		
+		document.write("<hr/>");
+		var data=10;
+		document.write(typeof data + "," + typeof String(data) + "</br>");
+	</script>
+</body>
+</html>
